@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName>"$/fakk2_code/fakk2_new/fgame", FYHAAAAA</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <ProjectGuid>{75A48149-88C8-49A5-BAB9-3AE5388EA7A5}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\./Release\</OutDir>
+    <IntDir>.\./Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\../Debug\</OutDir>
+    <IntDir>.\./Debug\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;_USRDLL;FGAME_EXPORTS;GAME_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\./Release\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\./Release\fgame.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\./Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\./Release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\./Release\fgame.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\./Release\fgame.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OutputFile>../Release/fgamex86.dll</OutputFile>
+      <ImportLibrary>.\./Release\fgamex86.lib</ImportLibrary>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>.\game.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level4</WarningLevel>
+      <MinimalRebuild>false</MinimalRebuild>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <PreprocessorDefinitions>_DEBUG;WIN32;_WINDOWS;_USRDLL;FGAME_EXPORTS;GAME_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\./Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\./Debug\fgame.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\./Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\./Debug\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\../Debug\fgame.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\../Debug\fgame.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OutputFile>../Debug/fgamex86.dll</OutputFile>
+      <ImportLibrary>.\../Debug\fgamex86.lib</ImportLibrary>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>.\game.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\win32\win_bounds.cpp" />
+    <ClCompile Include="actor.cpp" />
+    <ClCompile Include="ammo.cpp" />
+    <ClCompile Include="animate.cpp" />
+    <ClCompile Include="archive.cpp" />
+    <ClCompile Include="armor.cpp" />
+    <ClCompile Include="beam.cpp" />
+    <ClCompile Include="behavior.cpp" />
+    <ClCompile Include="bg_misc.c" />
+    <ClCompile Include="bg_pmove.c" />
+    <ClCompile Include="bspline.cpp" />
+    <ClCompile Include="camera.cpp" />
+    <ClCompile Include="characterstate.cpp" />
+    <ClCompile Include="class.cpp" />
+    <ClCompile Include="clusterbomb.cpp" />
+    <ClCompile Include="crossbow.cpp" />
+    <ClCompile Include="debuglines.cpp" />
+    <ClCompile Include="decals.cpp" />
+    <ClCompile Include="doors.cpp" />
+    <ClCompile Include="earthquake.cpp" />
+    <ClCompile Include="edenwater.cpp" />
+    <ClCompile Include="entity.cpp" />
+    <ClCompile Include="explosion.cpp" />
+    <ClCompile Include="flamethrower.cpp" />
+    <ClCompile Include="flashbang.cpp" />
+    <ClCompile Include="game.cpp" />
+    <ClCompile Include="gamecmds.cpp" />
+    <ClCompile Include="gamecvars.cpp" />
+    <ClCompile Include="gamescript.cpp" />
+    <ClCompile Include="gibs.cpp" />
+    <ClCompile Include="goo.cpp" />
+    <ClCompile Include="gravpath.cpp" />
+    <ClCompile Include="g_main.cpp" />
+    <ClCompile Include="g_phys.cpp" />
+    <ClCompile Include="g_spawn.cpp" />
+    <ClCompile Include="g_utils.cpp" />
+    <ClCompile Include="health.cpp" />
+    <ClCompile Include="hornofconjuring.cpp" />
+    <ClCompile Include="inventoryitem.cpp" />
+    <ClCompile Include="ipfilter.cpp" />
+    <ClCompile Include="item.cpp" />
+    <ClCompile Include="level.cpp" />
+    <ClCompile Include="light.cpp" />
+    <ClCompile Include="listener.cpp" />
+    <ClCompile Include="misc.cpp" />
+    <ClCompile Include="mover.cpp" />
+    <ClCompile Include="nature.cpp" />
+    <ClCompile Include="navigate.cpp" />
+    <ClCompile Include="object.cpp" />
+    <ClCompile Include="path.cpp" />
+    <ClCompile Include="player.cpp" />
+    <ClCompile Include="PlayerStart.cpp" />
+    <ClCompile Include="player_combat.cpp" />
+    <ClCompile Include="player_util.cpp" />
+    <ClCompile Include="portal.cpp" />
+    <ClCompile Include="powerups.cpp" />
+    <ClCompile Include="q_math.c" />
+    <ClCompile Include="q_mathsys.c" />
+    <ClCompile Include="q_shared.c" />
+    <ClCompile Include="rope.cpp" />
+    <ClCompile Include="script.cpp" />
+    <ClCompile Include="scriptmaster.cpp" />
+    <ClCompile Include="scriptslave.cpp" />
+    <ClCompile Include="scriptvariable.cpp" />
+    <ClCompile Include="sentient.cpp" />
+    <ClCompile Include="shield.cpp" />
+    <ClCompile Include="soulsucker.cpp" />
+    <ClCompile Include="soundman.cpp" />
+    <ClCompile Include="spawners.cpp" />
+    <ClCompile Include="specialfx.cpp" />
+    <ClCompile Include="steering.cpp" />
+    <ClCompile Include="str.cpp" />
+    <ClCompile Include="sword.cpp" />
+    <ClCompile Include="trigger.cpp" />
+    <ClCompile Include="vehicle.cpp" />
+    <ClCompile Include="viewthing.cpp" />
+    <ClCompile Include="weapon.cpp" />
+    <ClCompile Include="weaputils.cpp" />
+    <ClCompile Include="worldspawn.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="game.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="actor.h" />
+    <ClInclude Include="ammo.h" />
+    <ClInclude Include="animate.h" />
+    <ClInclude Include="archive.h" />
+    <ClInclude Include="armor.h" />
+    <ClInclude Include="beam.h" />
+    <ClInclude Include="behavior.h" />
+    <ClInclude Include="bg_local.h" />
+    <ClInclude Include="bg_public.h" />
+    <ClInclude Include="bspline.h" />
+    <ClInclude Include="camera.h" />
+    <ClInclude Include="characterstate.h" />
+    <ClInclude Include="class.h" />
+    <ClInclude Include="clusterbomb.h" />
+    <ClInclude Include="container.h" />
+    <ClInclude Include="crossbow.h" />
+    <ClInclude Include="debuglines.h" />
+    <ClInclude Include="decals.h" />
+    <ClInclude Include="doors.h" />
+    <ClInclude Include="earthquake.h" />
+    <ClInclude Include="edenwater.h" />
+    <ClInclude Include="entity.h" />
+    <ClInclude Include="explosion.h" />
+    <ClInclude Include="flamethrower.h" />
+    <ClInclude Include="flashbang.h" />
+    <ClInclude Include="game.h" />
+    <ClInclude Include="gamecmds.h" />
+    <ClInclude Include="gamecvars.h" />
+    <ClInclude Include="gamescript.h" />
+    <ClInclude Include="gibs.h" />
+    <ClInclude Include="goo.h" />
+    <ClInclude Include="gravpath.h" />
+    <ClInclude Include="g_local.h" />
+    <ClInclude Include="g_main.h" />
+    <ClInclude Include="g_phys.h" />
+    <ClInclude Include="g_public.h" />
+    <ClInclude Include="g_spawn.h" />
+    <ClInclude Include="g_utils.h" />
+    <ClInclude Include="health.h" />
+    <ClInclude Include="hornofconjuring.h" />
+    <ClInclude Include="inventoryitem.h" />
+    <ClInclude Include="ipfilter.h" />
+    <ClInclude Include="item.h" />
+    <ClInclude Include="level.h" />
+    <ClInclude Include="light.h" />
+    <ClInclude Include="Linklist.h" />
+    <ClInclude Include="listener.h" />
+    <ClInclude Include="misc.h" />
+    <ClInclude Include="mover.h" />
+    <ClInclude Include="nature.h" />
+    <ClInclude Include="navigate.h" />
+    <ClInclude Include="object.h" />
+    <ClInclude Include="path.h" />
+    <ClInclude Include="player.h" />
+    <ClInclude Include="PlayerStart.h" />
+    <ClInclude Include="portal.h" />
+    <ClInclude Include="powerups.h" />
+    <ClInclude Include="queue.h" />
+    <ClInclude Include="q_shared.h" />
+    <ClInclude Include="rope.h" />
+    <ClInclude Include="script.h" />
+    <ClInclude Include="scriptmaster.h" />
+    <ClInclude Include="scriptslave.h" />
+    <ClInclude Include="scriptvariable.h" />
+    <ClInclude Include="sentient.h" />
+    <ClInclude Include="shield.h" />
+    <ClInclude Include="soulsucker.h" />
+    <ClInclude Include="soundman.h" />
+    <ClInclude Include="spawners.h" />
+    <ClInclude Include="specialfx.h" />
+    <ClInclude Include="stack.h" />
+    <ClInclude Include="steering.h" />
+    <ClInclude Include="str.h" />
+    <ClInclude Include="surfaceflags.h" />
+    <ClInclude Include="sword.h" />
+    <ClInclude Include="trigger.h" />
+    <ClInclude Include="umap.h" />
+    <ClInclude Include="vector.h" />
+    <ClInclude Include="vehicle.h" />
+    <ClInclude Include="viewthing.h" />
+    <ClInclude Include="weapon.h" />
+    <ClInclude Include="weaputils.h" />
+    <ClInclude Include="worldspawn.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
