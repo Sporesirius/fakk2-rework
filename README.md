@@ -2,6 +2,9 @@
 
 Trying to modernize Heavy Metal: F.A.K.K. 2
 
+NOTE: I don't have time for this project at the moment and it is not a high priority for me. Maybe there are people who want to work on it.
+The features suggested here were just ideas.
+
 ### Planned Features (ideas):
 
 - [] Switch to CMake
