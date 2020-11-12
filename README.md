@@ -10,5 +10,5 @@ NOTE: I don't have time for this project at the moment and it is not a high prio
 - [] Overall bug fixes and modernization of the code
 - [] Cross-platform support (Linux & macOS)?
 - [] Porting F.A.K.K. 2 to [ioquake3](https://github.com/ioquake/ioq3) or [vkQuake3](https://github.com/suijingfeng/vkQuake3) for Vulkan support?
-- [] Implementing netcode for F.A.K.K. 2 Arena and later [RetroSpy](https://github.com/GameProgressive/RetroSpyServer) services?
+- [] Implementing netcode for F.A.K.K. 2 Arena and later [UniSpy](https://github.com/GameProgressive/UniSpyServer) (formerly RetroSpy) services?
 - [] Possibly adding NVIDIA RTX if we use vkQuake3 with the vulkan renderer?
